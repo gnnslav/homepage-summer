@@ -600,6 +600,12 @@
   .contacts li a.facebook:hover {
     color: #3b5998;
   }
+  .contacts li a.twitter:hover {
+    color: #3b5998;
+  }
+  .contacts li a.instagram:hover {
+    color: #3b5998;
+  }
   .contacts li a.github:hover {
     color: dimgrey;
   }
