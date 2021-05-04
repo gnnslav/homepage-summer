@@ -10,7 +10,7 @@
     box-sizing: inherit;
   }
   html {
-    font-size: 14px;
+    font-size: 16px;
     -webkit-text-size-adjust: 100%;
     text-size-adjust: 100%;
     box-sizing: border-box;
@@ -19,7 +19,7 @@
   body {
     margin: 0;
     line-height: 1.4285em;
-    color: rgba(0, 0, 0, 0.87);
+    color: rgba(0, 0, 0, 0.7);
   }
   body {
     font-family:
@@ -57,12 +57,15 @@
   }
   h1 {
     font-weight: 900;
-    font-size: 1.5rem;
-    margin-bottom: 0;
+    font-size: 3rem;
+    /* //margin-bottom: 0; */
+    margin: 11px 0 17px 0;
+    color: #e3e3e3;;
+    text-shadow: 4px 4px 3px #201e1b4d, 2px -2px 0px #cdc3c3;
   }
   h2 {
     font-weight: 900;
-    font-size: 3rem;
+    font-size: 1.2rem;
     letter-spacing: 0.25em;
   }
   h2 + p {
@@ -72,7 +75,7 @@
   }
   h3 {
     font-weight: 700;
-    font-size: 1.25rem;
+    font-size: 1.1rem;
     letter-spacing: 0.15em;
   }
   h4 {
@@ -590,11 +593,12 @@
     margin-bottom: 0.25rem;
     margin-right: 1em;
   }
-  .contacts li::before {
+  /* .contacts li::before {
     display: none;
-  }
+  } */
   .contacts li a {
     color: black;
+    font-size: 1.1rem;
     transition: color 0.2s ease-in-out;
   }
   .contacts li a.facebook:hover {
@@ -629,7 +633,7 @@
   }
   .contacts li a .icon {
     fill: currentColor;
-    height: 1.1428rem;
+    height: 1.4428rem;
     vertical-align: text-bottom;
   }
   
@@ -654,7 +658,7 @@
   details {
     display: block;
   }
-  details > summary::-webkit-details-marker {
+  details > summary::marker {
     margin-left: 0.25em;
     margin-right: 0.25em;
   }
@@ -855,6 +859,9 @@
   .color.chartreuse::before {
     background-color: chartreuse;
   }
+  .side-color{
+    background-color: #9292971c;
+  }
   
   /* Audio button */
   button.audio {
@@ -1054,3 +1061,128 @@
       margin-bottom: 0;
     }
   }
+
+
+  .link, .link > a {
+    position: relative;
+    color: inherit;
+    text-decoration: none;
+    line-height: 24px;
+  }
+
+
+  .link:before, .link:after, .link > a:before, .link > a:after {
+    content: '';
+    position: absolute;
+    transition: transform .5s ease;
+  }
+
+  .effect-link {
+    display: inline-block;
+    overflow: hidden;
+    margin: 10px;
+  }
+  .effect-link:before, .effect-link:after {
+    right: 0;
+    bottom: 0;
+    background: #5e5d615e;
+  }
+  .effect-link:before {
+    width: 100%;
+    height: 2px;
+    transform: translateX(-100%);
+  }
+  .effect-link:after {
+    width: 2px;
+    height: 100%;
+    transform: translateY(100%);
+  }
+  .effect-link > a {
+    display: block;
+    padding: 10px;
+  }
+  .effect-link > a:before, .effect-link > a:after {
+    left: 0;
+    top: 0;
+    background: #5e5d615e;
+  }
+  .effect-link > a:before {
+    width: 100%;
+    height: 2px;
+    transform: translateX(100%);
+  }
+  .effect-link > a:after {
+    width: 2px;
+    height: 100%;
+    transform: translateY(-100%);
+  }
+  .effect-link:hover:before, .effect-link:hover:after, .effect-link:hover > a:before, .effect-link:hover > a:after {
+    transform: translate(0, 0);
+  }
+
+  .field{
+    height: 23px;
+    overflow: hidden;
+  }
+  .field .tags{
+    display: inline-block;
+    position: relative;
+    white-space: nowrap;
+    top: 0;
+    left: 0;
+
+    -webkit-animation:move 5s;
+    -moz-animation:move 5s;
+      -ms-animation:move 5s;
+      -o-animation:move 5s;
+          animation:move 5s;
+/*animation-iteration-count*/
+    -webkit-animation-iteration-count:infinite;
+      -moz-animation-iteration-count:infinite;
+        -ms-animation-iteration-count:infinite;
+        -o-animation-iteration-count:infinite;
+            animation-iteration-count:infinite;
+/*animation-delay*/
+    -webkit-animation-delay:5s;
+      -moz-animation-delay:5s;
+        -ms-animation-delay:5s;
+        -o-animation-delay:5s;
+            animation-delay:5s;
+}
+
+@keyframes move{
+  0%  { top: 0px; }
+  20% { top: -23px; }
+  40% { top: -43px; }
+  60% { top: -63px; }
+  80% { top: -83px; }
+}
+
+@-webkit-keyframes move {
+  0%  { top: 0px; }
+  20% { top: -23px; }
+  40% { top: -43px; }
+  60% { top: -63px; }
+  80% { top: -83px; }
+}
+@-moz-keyframes move {
+  0%  { top: 0px; }
+  20% { top: -23px; }
+  40% { top: -43px; }
+  60% { top: -63px; }
+  80% { top: -83px; }
+}
+@-o-keyframes move {
+  0%  { top: 0px; }
+  20% { top: -23px; }
+  40% { top: -43px; }
+  60% { top: -63px; }
+  80% { top: -83px; }
+}
+@keyframes move {
+  0%  { top: 0px; }
+  20% { top: -23px; }
+  40% { top: -43px; }
+  60% { top: -63px; }
+  80% { top: -83px; }
+}
